@@ -8,7 +8,7 @@
     	if($first_var > $x){
     		echo 'Задуманное число НЕ входит в числовой ряд!';break;
     	} else {
-    		if($first_var == $x){
+    		if($first_var === $x){
     			echo "Задуманное число ВХОДИТ в числовой ряд!";break;
     		} else {
     			$third_var = $first_var;
