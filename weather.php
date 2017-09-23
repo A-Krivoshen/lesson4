@@ -14,10 +14,7 @@ if (file_exists($filename)) {
 }
  else {
       $allData = json_decode($json, true); 	  
- 	   $cacheFile = fopen($filename, 'w');
- 	   $cacheWrite = fwrite($cacheFile, $allData);
- 	   fclose($cacheFile);
- 	   
+ 	  file_put_contents($filename,$allData);
 }
 
 $allData = json_decode($json, true);
