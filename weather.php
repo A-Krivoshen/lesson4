@@ -14,8 +14,9 @@ if (file_exists($filename)) {
 }
  else {
       $allData = json_decode($json, true); 	  
- 	  file_put_contents($filename,$allData);
-}
+     $string_data = serialize($allData);
+     file_put_contents($filename, $string_data); 	  
+ 	  }
 
 $allData = json_decode($json, true);
 echo 'name:' . $allData['name'] . "<br>" .
@@ -24,7 +25,7 @@ echo 'name:' . $allData['name'] . "<br>" .
     'temperature: ' . $allData['main']['temp'] . "<br>" .
     'visibility ' . $allData['visibility'] . "<br>" .
     'pressure:' . $allData['main']['pressure'];
-/*file_put_contents($filename,$allData);*/  
+
 
 ?>
 
